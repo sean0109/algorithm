@@ -3,6 +3,9 @@ package main.concept.solid.dip.ex0;
 public class DipMainFix {
     public static void main(String[] args) {
         System.out.println("의존 역전 원칙을 잘 지킨 설계 예시 ex0");
+
+        //
+        ComputerV2 computer = new ComputerV2(new Mouse());
     }
 }
 
