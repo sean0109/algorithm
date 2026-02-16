@@ -1,8 +1,7 @@
 package main.codingtest.programmers.levelone;
 
-import java.util.*;
-
-public class Solution_practice_대충만든자판 {
+// 대충만든 자판
+public class Solution_practice_001 {
 
     public static void main(String[] args) {
 

@@ -3,7 +3,8 @@ package main.codingtest.programmers.levelone;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Solution_practice_문자열내림차순배치 {
+// 문자열 내림차순 배치
+public class Solution_practice_002 {
 
     public static void main(String[] args) {
 
