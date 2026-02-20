@@ -10,9 +10,9 @@ public class BasicSkills {
     public static void main(String[] args) {
         //arraysPractice();
         //setPractice();
-        //stringPractice();
+        stringPractice();
         //streamPractice();
-        collectionTest();
+        //collectionTest();
         //stackAndQueue();
         //mathTest();
         //hashMapTest();
@@ -208,6 +208,11 @@ public class BasicSkills {
         String[] strArr = {"I", "Love", "You"};
         String output = String.join("", strArr);
         System.out.println(output);
+
+        // 글자 자르기
+        String str4 = "hello";
+        String substring = str4.substring(1, 5);    // 시작인덱스는 포함하고, 끝 인덱스는 포함하지 않음
+        System.out.println("substring : " + substring);
     }
 
     // *** Set ***
