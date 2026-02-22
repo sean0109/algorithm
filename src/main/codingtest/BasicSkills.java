@@ -10,12 +10,12 @@ public class BasicSkills {
     public static void main(String[] args) {
         //arraysPractice();
         //setPractice();
-        stringPractice();
+        //stringPractice();
         //streamPractice();
         //collectionTest();
         //stackAndQueue();
         //mathTest();
-        //hashMapTest();
+        hashMapTest();
         //hashMapTest2();
     }
 
@@ -37,6 +37,7 @@ public class BasicSkills {
             System.out.println("key : " + entry.getKey() + " , value: " + entry.getValue());
         }
 
+        // 찾는 값이 없으면, 디퐅트 값 반환
         map.keySet().stream().forEach(System.out::println);
         Object orDefault = map.getOrDefault("Key90", "Value1");
         System.out.println("orDefault : " + orDefault);
@@ -54,6 +55,7 @@ public class BasicSkills {
 
         System.out.println("maxKey = " + maxKey);
         System.out.println("minKey = " + minKey);
+
     }
 
     // *** HashMap2 ***

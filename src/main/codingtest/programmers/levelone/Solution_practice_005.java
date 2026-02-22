@@ -27,7 +27,7 @@ public class Solution_practice_005 {
             int result = 0;
             int length = p.length();
 
-            for (int i = 0; i < t.length() - length; i++) {
+            for (int i = 0; i <= t.length() - length; i++) {
 
                 String s1 = t.substring(i, i + length);
 
