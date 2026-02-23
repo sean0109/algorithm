@@ -15,8 +15,9 @@ public class BasicSkills {
         //collectionTest();
         //stackAndQueue();
         //mathTest();
-        hashMapTest();
+        //hashMapTest();
         //hashMapTest2();
+        mapSortTest();
     }
 
     // *** HashMap ***
@@ -78,6 +79,46 @@ public class BasicSkills {
 
     }
 
+    // Map 의 정렬을 알아보자
+    public static void mapSortTest() {
+        // 1. 기본적으로 Map은 index가 없으므로, 정렬이 없다. 다만, 구현체에따라 입력 순서 order 는 존재한다.
+        // 2. LinkedHashMap : 입력 순서 유지 (정렬은 아님)
+        Map<String, Integer> map = new LinkedHashMap<>();
+        map.put("C", 3);
+        map.put("A", 2);
+        map.put("B", 1);
+        System.out.println("LinkedHashMap : " + map);
+
+        // 3. TreeMap : 자동 순서 유지 됨 ( key 값 기준 )
+        Map<String, Integer> map2 = new TreeMap<>();
+        map2.put("C", 3);
+        map2.put("A", 2);
+        map2.put("B", 1);
+        System.out.println("TreeMap : " + map2);
+
+        // 4. 순서 직접 지정 ( TreeMap )
+        Map<String, Integer> map3 = new TreeMap<>(Comparator.reverseOrder());
+
+        // Map을 List에 넣어 값으로 정렬 하는 방법을 알아본다.
+
+        // 5. HashMap을 정렬 : Map.Entry.comparingByValue(), Map.Entry.comparingByKey()
+        Map<String, Integer> map4 = new HashMap<>();
+        map4.put("C", 3);
+        map4.put("A", 2);
+        map4.put("B", 1);
+
+        System.out.println("HashMap 정렬 전 : " + map4);
+
+        List<Map.Entry<String, Integer>> list1 = new ArrayList<>(map.entrySet());
+        list1.sort(Map.Entry.comparingByValue(Comparator.reverseOrder())); // 키로 정렬 cf) comparingByValue() : 값으로 정렬
+
+        // 정렬 확인
+        for (Map.Entry<String, Integer> entry : list1) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+        
+    }
+
     // *** 스택 & 큐 ***
     public static void stackAndQueue() {
         // 큐
@@ -100,8 +141,8 @@ public class BasicSkills {
         for (int i = 1; i <= 10; i ++) {
             dequeue1.offerLast(i);
         }
-
         System.out.println("dequeue1 : " + dequeue1);
+
         while (!dequeue1.isEmpty()) {
             System.out.println("dequeue1.poll() = " + dequeue1.pollFirst());
         }
@@ -236,7 +277,7 @@ public class BasicSkills {
         System.out.println(treeSet);
     }
 
-    // *** Arrays ***
+    // *** Arrays : 배열을 여러 자료구조로 변환해 보자 ***
     private static void arraysPractice() {
 
         int[] arr = {10, 8, 11, 2, 3, 0};
