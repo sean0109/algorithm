@@ -1,5 +1,6 @@
 package main.codingtest.programmers.levelone;
 
+// 문자열 나누기
 public class Solution_practice_008 {
 
     public static void main(String[] args) {
